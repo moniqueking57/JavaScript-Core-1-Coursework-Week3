@@ -22,10 +22,21 @@ PasswordValidationResult=  [false, false, false, false, true]
 
 */
 
-function validatePasswords(passwords) {
-
+function validatePasswords(password) {
+  let checkPass = password.map((elem, index, arr) => {
+    if (elem.length >= 5 &&
+       /[a-z]/.test(elem) && 
+       /[A-Z]/.test(elem) && 
+       /[0-9]/.test(elem) &&
+       /[!#$%,&*]/.test(elem) &&
+       arr.indexOf(elem) === index) {
+       return true;
+    } else {
+      return false;
+    }
+  }); 
+  return checkPass; 
 }
-
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"]

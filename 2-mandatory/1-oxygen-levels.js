@@ -11,7 +11,7 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels() {}
+function safeLevels(arr) {}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
