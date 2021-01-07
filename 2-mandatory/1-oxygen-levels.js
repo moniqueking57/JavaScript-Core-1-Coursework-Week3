@@ -11,7 +11,10 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels(arr) {}
+function safeLevels(levels) {
+  let checkLevels = levels.find (levels > 19.5 )
+  return checkLevels
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

@@ -15,8 +15,13 @@
   
 */
 
-function colonisers() {}
-
+function colonisers(arr) {  
+  return arr.filter(element => 
+    element[0] === 
+    "A" && 
+    element.includes("family"));
+}
+//needed some assistance with this one :)
 /* ======= TESTS - DO NOT MODIFY ===== */
 
 const voyagers = [
