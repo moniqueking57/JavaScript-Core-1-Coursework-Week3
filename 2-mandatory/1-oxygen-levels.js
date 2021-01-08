@@ -11,10 +11,17 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels(levels) {
-  let checkLevels = levels.find (levels > 19.5 )
-  return checkLevels
+function safeLevels(arr) {
+  const convert = arr.map(function (element) {
+    return parseFloat(element);
+  });
+  const safeLevels = convert.filter(function (element) {
+    return element > 19.5 && element < 23.5;
+  });
+  return `${safeLevels[0]}%`;
 }
+
+//I really struggled with this one so Chizim helped me to pass it. I have a catch up session tonight so will be going over it then to better understand this code. 
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
